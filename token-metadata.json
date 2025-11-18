@@ -1,0 +1,24 @@
+{
+  "name": "Copper-Backed BTC",
+  "symbol": "COPPERBTC",
+  "decimals": 0,
+  "chain": "Base Mainnet",
+  "chainId": 8453,
+  "contractAddress": "0xF841ee6CD34f25636832970640530f509dB00Ac3",
+  "description": "A physically-backed, Bitcoin-denominated ERC-20 on Base. Each token is minted only after an NFT receipt and on-chain attestation verify the underlying copper lot.",
+  "image": "ipfs://bafybeihq7ziy57rpahotoqmqx45kzkylfvdpp5au4cmvhptafcgwzakagu",
+  "logoURI": "ipfs://bafybeihq7ziy57rpahotoqmqx45kzkylfvdpp5au4cmvhptafcgwzakagu",
+  "website": "",
+  "links": {
+    "basescan": "https://basescan.org/address/0xF841ee6CD34f25636832970640530f509dB00Ac3",
+    "ipfs_receipt": "https://gateway.pinata.cloud/ipfs/bafybeifuza7p3wkid3zvzc4ltcvgs54eonlfou36c4hd2x5mka23ck6dxq/receipt.json"
+  },
+  "tags": [
+    "RWA",
+    "Copper",
+    "Base",
+    "BTC-denominated",
+    "Proof-of-Metal"
+  ],
+  "version": 1
+}
