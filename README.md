@@ -3,8 +3,6 @@ A proof-of-metal experiment bridging real-world copper assets to on-chain value 
 
 <p align="center">
   <img src="assets/logo.png" alt="CopperBTC logo" width="300"/>
-  <br/><br/>
-  <img src="assets/token.png" alt="CopperBTC token" width="120"/>
 </p>
 
 ## 🪙 Overview
