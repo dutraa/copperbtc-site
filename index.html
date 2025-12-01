@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Copper-Backed BTC (cuBTC) – Proof-of-Metal on Base</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Copper-Backed BTC (cuBTC) is a proof-of-metal experiment on Base that links verifiable copper lots to a satoshi-denominated ERC-20 token." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark">
+          <img src="assets/logo.png" alt="cuBTC logo" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Copper-Backed BTC</span>
+          <span class="brand-ticker">cuBTC · Base</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#why">Why cuBTC?</a></li>
+          <li><a href="#ecosystem">Self-Custodied Ecosystem</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#builders">For Builders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Proof-of-metal on Base · RWA experiment</p>
+          <h1>Make Money Matter Again.</h1>
+          <p class="lead">
+            Copper-Backed BTC (cuBTC) is a proof-of-metal experiment on Base that links verifiable copper lots
+            to a satoshi-denominated ERC-20 token.
+          </p>
+
+          <div class="hero-pill-row">
+            <span class="pill">Ticker: <strong>cuBTC</strong></span>
+            <span class="pill">Network: <strong>Base mainnet</strong></span>
+            <span class="pill">Unit: <strong>0-decimal, 1 token = 1 satoshi</strong></span>
+          </div>
+
+          <div class="hero-explainer">
+            <h2>What is cuBTC?</h2>
+            <p>
+              Each cuBTC is denominated in <strong>satoshis</strong>, but backed by attested copper lots proven via:
+            </p>
+            <ul>
+              <li>IPFS-hosted <strong>receipt folders</strong> (photos, invoices, storage info, <code>receipt.json</code>)</li>
+              <li>An on-chain <strong>Receipt NFT</strong> (ERC-721) that encodes weight, purity, and IPFS URI</li>
+              <li>An on-chain <strong>Attestation Registry</strong> that stores <code>keccak256(CID)</code>, attestor, and timestamp</li>
+            </ul>
+          </div>
+
+          <p class="disclaimer">
+            Experimental RWA project. Not an investment product, not Bitcoin, and not a claim on BTC.
+            cuBTC is denominated in satoshis but backed by real-world copper exposure.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Protocol Snapshot (Phase-0)</h2>
+          <dl>
+            <div>
+              <dt>Network</dt>
+              <dd>Base mainnet</dd>
+            </div>
+            <div>
+              <dt>Token</dt>
+              <dd>cuBTC · 0 decimals<br /><span class="muted">1 cuBTC = 1 satoshi unit</span></dd>
+            </div>
+            <div>
+              <dt>Backed by</dt>
+              <dd>Attested, self-custodied copper lots</dd>
+            </div>
+            <div>
+              <dt>Proof layer</dt>
+              <dd>IPFS receipts + on-chain attestation registry</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd><span class="status-dot"></span> Single self-custodied copper lot live (Phase-0)</dd>
+            </div>
+          </dl>
+          <div class="hero-links">
+            <a class="btn-primary" href="#" aria-disabled="true">CopperBTC dapp (coming soon)</a>
+            <p class="hero-note">Designed to plug into Chainlink PoR, Functions &amp; CCIP in later phases.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container section-grid">
+        <div>
+          <h2>Mission</h2>
+          <p>
+            Copper is the quiet backbone of electrification — power grids, EVs, data centers, renewable energy
+            infrastructure, and everything that moves electrons across the physical world.
+          </p>
+          <p>
+            Bitcoin, on the other hand, is the native money of the internet — programmable, permissionless, and
+            settled in units of <strong>satoshis</strong>.
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>Why copper?</h3>
+          <ul>
+            <li>Industrial metal with deep real-world demand</li>
+            <li>Critical to grid build-out, EVs, and renewables</li>
+            <li>Long-term macro story tied to electrification</li>
+          </ul>
+          <h3>Why Bitcoin-denominated?</h3>
+          <ul>
+            <li>Each cuBTC maps to <strong>1 satoshi</strong> worth of copper-backed exposure</li>
+            <li>Bitcoin-native mental model: stack satoshis, but with industrial metal backing</li>
+            <li>Transparent, programmable bridge between physical metals and digital value</li>
+          </ul>
+          <p class="mission-quote">
+            <strong>Goal:</strong> Build a transparent, programmable bridge between industrial metals and digital value —
+            starting with copper, denominated in satoshis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <h2>How it works (Phase-0)</h2>
+        <p class="section-intro">
+          Phase-0 is intentionally simple: one self-custodied copper lot, fully documented and proven on-chain.
+          Here’s the lifecycle:
+        </p>
+        <ol class="steps">
+          <li>
+            <h3>1. Buy &amp; document real copper</h3>
+            <p>
+              Acquire physical copper (e.g., bars, rounds, industrial lots). Capture invoices, serial numbers,
+              photos, storage details, and any relevant certificates.
+            </p>
+          </li>
+          <li>
+            <h3>2. Upload to IPFS</h3>
+            <p>
+              Bundle the evidence into a folder with a canonical <code>receipt.json</code> file and pin it to
+              IPFS (e.g., via Pinata). This folder becomes the source of truth for that copper lot.
+            </p>
+          </li>
+          <li>
+            <h3>3. Mint a Receipt NFT</h3>
+            <p>
+              Mint an ERC-721 <strong>Receipt NFT</strong> on Base pointing to the IPFS URI. Metadata encodes
+              weight, purity, serials, and other key attributes of the lot.
+            </p>
+          </li>
+          <li>
+            <h3>4. Attest in the Registry</h3>
+            <p>
+              An on-chain <strong>Attestation Registry</strong> stores <code>keccak256(CID)</code>, attestor address,
+              and timestamp. This creates a cryptographic binding between the NFT and the IPFS folder.
+            </p>
+          </li>
+          <li>
+            <h3>5. Mint cuBTC (0-decimal ERC-20)</h3>
+            <p>
+              cuBTC can only be minted for lots that have a valid on-chain attestation. Each minted cuBTC is
+              a 0-decimal token: <strong>1 cuBTC = 1 satoshi-denominated unit</strong>.
+            </p>
+          </li>
+          <li>
+            <h3>6. Verify through the CopperBTC dapp</h3>
+            <p>
+              The dapp (and open-source scripts) let anyone verify the Receipt NFT, attestation, and CID hash match,
+              and follow links to Basescan, IPFS gateways, and other explorers.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <h2>Why would someone want cuBTC?</h2>
+        <p class="section-intro">
+          cuBTC is a sandbox for industrial metal tokenization — denominated in satoshis, built for transparency, and
+          designed to be programmable from day one.
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Industrial metal exposure</h3>
+            <p>
+              Get copper-linked exposure without personally managing logistics for every bar, warehouse, or serial number.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Satoshi-denominated units</h3>
+            <p>
+              Think in satoshis, not abstract shares. cuBTC mirrors the Bitcoin mental model and keeps units intuitive.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Transparent, verifiable backing</h3>
+            <p>
+              IPFS receipts, NFTs, and on-chain hashes make it possible to independently audit the evidence for each lot.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Programmable capital</h3>
+            <p>
+              As an ERC-20, cuBTC is composable with DeFi — swaps, strategies, or structured products can be built around it.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Alternative macro exposure</h3>
+            <p>
+              Explore copper versus BTC, equities, or other assets as part of a broader macro or reflation thesis.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Early ecosystem position</h3>
+            <p>
+              Help shape how industrial metals get tokenized — from early standards to attestation models and vault flows.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="section section-alt">
+      <div class="container section-grid">
+        <div>
+          <h2>Self-Custodied Ecosystem</h2>
+          <p>
+            Phase-0 is explicitly <strong>self-custodied</strong>: the copper lot is owned, stored, and insured
+            by the individual, who then proves it cryptographically on-chain.
+          </p>
+          <p>
+            The idea is simple: <strong>Own the metal. Prove it on-chain.</strong>
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>Today: Self-custodied lots</h3>
+          <ul>
+            <li>You acquire and store copper yourself (home, vault, safe, etc.).</li>
+            <li>You generate receipts, photos, and documentation and upload them to IPFS.</li>
+            <li>You mint a Receipt NFT and register an attestation that binds the CID to your lot.</li>
+          </ul>
+          <h3>Tomorrow: Vault programs</h3>
+          <ul>
+            <li>
+              Integrate with professional vaulting providers (e.g., Money Metals or others) so users can opt into
+              fully managed storage.
+            </li>
+            <li>
+              Vaults issue cryptographic receipts and standardized <code>receipt.json</code> files for each lot.
+            </li>
+            <li>
+              Users can choose between home storage and professional vaults, while still getting the same on-chain proofs.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section">
+      <div class="container">
+        <h2>Roadmap</h2>
+        <p class="section-intro">
+          cuBTC is intentionally shipped as a small, auditable prototype — with a clear path toward stronger attestations,
+          vault integrations, and cross-chain usage.
+        </p>
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <h3>Phase-0 – Prototype (Today)</h3>
+            <ul>
+              <li>Single self-custodied copper lot</li>
+              <li>Receipt NFT + Attestation Registry on Base</li>
+              <li>Owner-gated cuBTC minting</li>
+              <li>Explorer / dapp with CID hash verification</li>
+            </ul>
+          </article>
+          <article class="roadmap-card">
+            <h3>Phase-1 – Decentralized Attestation</h3>
+            <ul>
+              <li>EIP-712 off-chain signatures from recognized attestors</li>
+              <li>Anyone can submit signed attestations on-chain</li>
+              <li>Standardized <code>receipt.json</code> schema for lots</li>
+            </ul>
+          </article>
+          <article class="roadmap-card">
+            <h3>Phase-2 – Chainlink PoR &amp; Vault Integrations</h3>
+            <ul>
+              <li>Chainlink Proof of Reserve feeds for copper lots</li>
+              <li>Multisig attestor committees with rotation rules</li>
+              <li>Integration with vault programs (e.g., Money Metals, others)</li>
+              <li>Automated freshness, storage, and audit checks</li>
+            </ul>
+          </article>
+          <article class="roadmap-card">
+            <h3>Phase-3 – Redemption &amp; Cross-Chain cuBTC</h3>
+            <ul>
+              <li>Clear redemption rules for eligible, redeemable lots</li>
+              <li>BTC-denominated reward / accounting logic</li>
+              <li>Cross-chain cuBTC via Chainlink CCIP</li>
+              <li>Institutional-grade reporting, proofs, and audits</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="builders" class="section section-alt">
+      <div class="container section-grid">
+        <div>
+          <h2>For Builders &amp; Chainlink</h2>
+          <p>
+            cuBTC is a small but opinionated proof-of-concept for industrial metal RWAs — built on Base and designed
+            with the Chainlink stack in mind from day zero.
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>Built to align with Chainlink</h3>
+          <ul>
+            <li><strong>Proof of Reserve (PoR):</strong> On-chain feeds for copper lot balances and freshness.</li>
+            <li><strong>Chainlink Functions:</strong> Pull warehouse, pricing, or inspection data into on-chain checks.</li>
+            <li><strong>Chainlink CCIP:</strong> Move cuBTC safely across chains while preserving attestation guarantees.</li>
+          </ul>
+          <h3>Open to collaboration</h3>
+          <ul>
+            <li>RWA teams exploring industrial metals</li>
+            <li>Vault providers and metals dealers</li>
+            <li>DeFi protocols looking for new collateral types</li>
+            <li>Chainlink ecosystem projects building PoR, automation, or reporting</li>
+          </ul>
+          <p class="builders-note">
+            If you’re experimenting with RWAs, industrial metals, or Chainlink-powered proofs, cuBTC is meant to be a
+            friendly prototype to build on, fork, or challenge.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Copper-Backed BTC (cuBTC). All rights reserved.</p>
+      <p class="footer-disclaimer">
+        Experimental RWA project on Base. Nothing here is financial, legal, or tax advice.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // basic mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+
+<section id="videos" style="padding:40px 0;">
+  <h2 style="color:#fff;text-align:center;">Demo Videos</h2>
+  <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <iframe src="https://player.vimeo.com/video/1142246525" width="480" height="270" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/1142246849" width="480" height="270" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+</body>
+</html>
